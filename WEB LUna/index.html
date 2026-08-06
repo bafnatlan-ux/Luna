@@ -1,0 +1,262 @@
+<html>
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title> Luna Havířov Hospoda </title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/all.min.css">
+
+</head>
+<body>
+    
+
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="Logo%20luna.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">ÚVOD</a></li>
+                    <li><a href="akce.html">AKCE</a></li>
+                    <li><a href="banketka.html">BANKETKA</a></li>
+                    <li><a href="kontakt.html">KONTAKT</a></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+        </nav>
+            
+        <div class="text-box">
+        <h1> Vítejte v Luně </h1>
+            <p>Místo pro přátele, pivo, hry a večery plné akcí, na které budeš chtít přijít znovu.</p>
+            <a href="akce.html" class="head-btn">Akce</a>
+            <a href="banketka.html" class="head-btn">Banketka</a>
+        </div>
+ 
+    </section>
+    
+  <section class="gallery">
+  <div class="slider">
+    <button class="prev">&#10094;</button>
+
+    <div class="slides">
+      <div class="slide">
+        <img src="lunaaa/luna3.JPEG" class="gallery-img" onclick="openImage(0)">
+        <img src="lunaaa/luna4.JPEG" class="gallery-img" onclick="openImage(1)">
+        <img src="lunaaa/luna2.JPEG" class="gallery-img" onclick="openImage(2)">
+      </div>
+
+      <div class="slide">
+        <img src="lunaaa/kulecnik.jpg" class="gallery-img" onclick="openImage(3)">
+        <img src="lunaaa/fotbalek.jpg" class="gallery-img" onclick="openImage(4)">
+        <img src="lunaaa/sipky2.jpg" class="gallery-img" onclick="openImage(5)">
+      </div>
+    </div>
+
+    <button class="next">&#10095;</button>
+  </div>
+
+  <!-- LIGHTBOX NA DETAIL OBRÁZKU -->
+  <div id="lightbox">
+    <span class="close-btn" onclick="closeImage()">&times;</span>
+    <button onclick="changeImage(-1)">&#10094;</button>
+    <img id="bigImage" src="" alt="Detail">
+    <button onclick="changeImage(1)">&#10095;</button>
+  </div>
+</section>
+    
+<section class="banketka">
+    <div class="text-box">
+    <h2>Banketka</h2>
+        <p>Hledáte místo pro svou oslavu, setkání s přáteli nebo vánoční večírek? V Luně se postaráme o to, aby váš večer stál za to. </p>
+        <a href="banketka.html" class="head-btn">Banketka</a>
+    </div> 
+</section>
+    
+<section class="kontakt">
+    <div class="box mapa">
+    <h1>Kde nás najdete?</h1>
+       <p> <a href="https://maps.app.goo.gl/NTG4aX9HjALvEeF26"> Šrámkova 1379/2, Havirov, Czech Republic </a></p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1828.57149799387!2d18.452924710640094!3d49.7714707359018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4713f928c74ebb45%3A0x41462aef18151af6!2sLuna!5e1!3m2!1scs!2scz!4v1784814839734!5m2!1scs!2scz" width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </div>
+        <div class="box doba">
+        <h1>Otevírací doba</h1>
+            <div class="dny">
+            <p> Pondělí 11:00 - 23:00 </p>
+            <p>Úterý 11:00 - 23:00</p>
+            <p>Středa 11:00 - 23:00</p>
+            <p>Čtvrtek 11:00 - 23:00</p>
+            <p>Pátek 11:00 - 00:00</p>
+            <p>Sobota11:00 - 00:00</p>
+            <p>Neděle 11:00 - 23:00</p>
+                </div>
+        </div>
+</section>
+    <section class="socky">
+        <h1>Kontakt</h1>
+        <p> Rezervace, objednávky: <a href="tel:+420730675319">+420 730 675 319</a> </p>
+        <p>Vedení:<a href="tel:+420777272704"> +420 777 272 704</a></p>
+        <div class="logo">
+        <a href="https://www.facebook.com/profile.php?id=61558400668974"><img src="lunaaa/logoFB.png"></a> 
+        <a href="https://www.instagram.com/lunahavirov/"><img src="lunaaa/logoIG.png"></a> 
+        </div>
+        
+        
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+<script>
+  const slides = document.querySelector(".slides");
+  const totalSlides = document.querySelectorAll(".slide").length;
+  let index = 0;
+
+  function showSlide() {
+    slides.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  document.querySelector(".next").addEventListener("click", () => {
+    index = (index + 1) % totalSlides;
+    showSlide();
+  });
+
+  document.querySelector(".prev").addEventListener("click", () => {
+    index = (index - 1 + totalSlides) % totalSlides;
+    showSlide();
+  });
+
+  // Seznam obrázků (přesné názvy souborů)
+  const images = [
+    "lunaaa/luna3.JPEG",
+    "lunaaa/luna4.JPEG",
+    "lunaaa/luna2.JPEG",
+    "lunaaa/kulecnik.jpg",
+    "lunaaa/fotbalek.jpg",
+    "lunaaa/sipky2.jpg"
+  ];
+
+  let currentImage = 0;
+
+  function openImage(idx) {
+    currentImage = idx;
+    document.getElementById("lightbox").style.display = "flex";
+    document.getElementById("bigImage").src = images[currentImage];
+  }
+
+  function changeImage(direction) {
+    currentImage += direction;
+    if (currentImage < 0) {
+      currentImage = images.length - 1;
+    }
+    if (currentImage >= images.length) {
+      currentImage = 0;
+    }
+    document.getElementById("bigImage").src = images[currentImage];
+  }
+
+  function closeImage() {
+    document.getElementById("lightbox").style.display = "none";
+  }
+</script>
+    
+ 
+
+    
+    
+    
+    
+    
+    
+    
+    
+   <!----------JavaScript for Toggle Menu------->
+    <script>
+        var navLinks = document.getElementById("navLinks")
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+    </script>
+    <script>
+    const slides = document.querySelector(".slides");
+const totalSlides = document.querySelectorAll(".slide").length;
+
+let index = 0;
+
+function showSlide() {
+    slides.style.transform = `translateX(-${index * 100}%)`;
+}
+
+document.querySelector(".next").addEventListener("click", () => {
+    index = (index + 1) % totalSlides;
+    showSlide();
+});
+
+document.querySelector(".prev").addEventListener("click", () => {
+    index = (index - 1 + totalSlides) % totalSlides;
+    showSlide();
+});
+
+// Automatické přepínání každé 20 sekundy
+setInterval(() => {
+    index = (index + 1) % totalSlides;
+    showSlide();
+}, 20000);
+        
+const images = [
+    "lunaaa/luna3.JPEG",
+    "lunaaa/luna4.JPEG",
+    "lunaaa/luna2.JPEG",
+    "lunaaa/kulechik.jpg",
+    "lunaaa/fotbalek.jpg",
+    "lunaaa/sipky2.jpg"
+];
+
+let currentImage = 0;
+
+function openImage(index) {
+    currentImage = index;
+    document.getElementById("lightbox").style.display = "flex";
+    document.getElementById("bigImage").src = images[currentImage];
+}
+
+function changeImage(direction) {
+    currentImage += direction;
+
+    if (currentImage < 0) {
+        currentImage = images.length - 1;
+    }
+
+    if (currentImage >= images.length) {
+        currentImage = 0;
+    }
+
+    document.getElementById("bigImage").src = images[currentImage];
+}
+
+function closeImage() {
+    document.getElementById("lightbox").style.display = "none";
+}
+    </script>
+    </body>
+</html>
