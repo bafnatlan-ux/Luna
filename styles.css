@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
     }
 
 
@@ -30,21 +31,26 @@
     background-size: cover;
     position: relative;
     }
-.nav{
+nav{
     display: flex;
-    padding: 10px 6%;
+    padding: 1% 6%;
     justify-content: space-between;
     align-items: center;
     background: rgba(57, 50, 56, 0.75);
 }
 
-.nav img{
+nav img{
     width: 80px; 
-    display:block;
+    display: block;
 }
 .nav-links{
     flex: 1;
     text-align: right;
+}
+.nav-links ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 .nav-links ul li{
     list-style: none;
@@ -71,7 +77,9 @@
 .nav-links ul li:hover::after {
      width: 100%;
 }
-
+nav .fa-solid{
+    display: none;
+}
 .text-box{
     width: 90%;
     color: #fff;
