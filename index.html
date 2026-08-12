@@ -7,21 +7,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/all.min.css">
-    <link rel="icon" href="Logo%20luna.png" type"image/png">
+    <link rel="icon" href="Logo%20luna.png" type="image/png">
 </head>
 <body>
     
 
     <section class="header">
         <nav>
-            <a href="index.html"><img src="Logo%20luna.png"></a>
+            <a href="/"><img src="Logo%20luna.png"></a>
             <div class="nav-links" id="navLinks">
                 <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
                 <ul>
-                    <li><a href="index.html">ÚVOD</a></li>
-                    <li><a href="akce.html">AKCE</a></li>
-                    <li><a href="banketka.html">BANKETKA</a></li>
-                    <li><a href="kontakt.html">KONTAKT</a></li>
+                    <li><a href="/">ÚVOD</a></li>
+                    <li><a href="/akce">AKCE</a></li>
+                    <li><a href="/banketka">BANKETKA</a></li>
+                    <li><a href="/kontakt">KONTAKT</a></li>
                 </ul>
             </div>
             <i class="fa-solid fa-bars" onclick="showMenu()"></i>
@@ -30,8 +30,8 @@
         <div class="text-box">
         <h1> Vítejte v Luně </h1>
             <p>Místo pro přátele, pivo, hry a večery plné akcí, na které budeš chtít přijít znovu.</p>
-            <a href="akce.html" class="head-btn">Akce</a>
-            <a href="banketka.html" class="head-btn">Banketka</a>
+            <a href="/akce" class="head-btn">Akce</a>
+            <a href="/banketka" class="head-btn">Banketka</a>
         </div>
  
     </section>
@@ -70,7 +70,7 @@
     <div class="text-box">
     <h2>Banketka</h2>
         <p>Hledáte místo pro svou oslavu, setkání s přáteli nebo vánoční večírek? V Luně se postaráme o to, aby váš večer stál za to. </p>
-        <a href="banketka.html" class="head-btn">Banketka</a>
+        <a href="/banketka" class="head-btn">Banketka</a>
     </div> 
 </section>
     
@@ -104,89 +104,7 @@
         
         
     </section>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
-<script>
-  const slides = document.querySelector(".slides");
-  const totalSlides = document.querySelectorAll(".slide").length;
-  let index = 0;
-
-  function showSlide() {
-    slides.style.transform = `translateX(-${index * 100}%)`;
-  }
-
-  document.querySelector(".next").addEventListener("click", () => {
-    index = (index + 1) % totalSlides;
-    showSlide();
-  });
-
-  document.querySelector(".prev").addEventListener("click", () => {
-    index = (index - 1 + totalSlides) % totalSlides;
-    showSlide();
-  });
-
-  // Seznam obrázků (přesné názvy souborů)
-  const images = [
-    "lunaaa/luna3.JPEG",
-    "lunaaa/luna4.JPEG",
-    "lunaaa/luna2.JPEG",
-    "lunaaa/kulecnik.jpg",
-    "lunaaa/fotbalek.jpg",
-    "lunaaa/sipky2.jpg"
-  ];
-
-  let currentImage = 0;
-
-  function openImage(idx) {
-    currentImage = idx;
-    document.getElementById("lightbox").style.display = "flex";
-    document.getElementById("bigImage").src = images[currentImage];
-  }
-
-  function changeImage(direction) {
-    currentImage += direction;
-    if (currentImage < 0) {
-      currentImage = images.length - 1;
-    }
-    if (currentImage >= images.length) {
-      currentImage = 0;
-    }
-    document.getElementById("bigImage").src = images[currentImage];
-  }
-
-  function closeImage() {
-    document.getElementById("lightbox").style.display = "none";
-  }
-</script>
-    
- 
-
-    
-    
-    
-    
-    
-    
-    
-    
    <!----------JavaScript for Toggle Menu------->
     <script>
         var navLinks = document.getElementById("navLinks")
@@ -227,7 +145,7 @@ const images = [
     "lunaaa/luna3.JPEG",
     "lunaaa/luna4.JPEG",
     "lunaaa/luna2.JPEG",
-    "lunaaa/kulechik.jpg",
+    "lunaaa/kulecnik.jpg",
     "lunaaa/fotbalek.jpg",
     "lunaaa/sipky2.jpg"
 ];
