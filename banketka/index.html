@@ -1,1 +1,171 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Luna Havířov Hospoda </title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/all.min.css">
+    <link rel="icon" href="../Logo%20luna.png" type="image/png">
+</head>
+<body>
+    
 
+    <section class="headerost">
+        <nav>
+            <a href="/"><img src="../Logo%20luna.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="/">ÚVOD</a></li>
+                    <li><a href="/akce">AKCE</a></li>
+                    <li><a href="/banketka">BANKETKA</a></li>
+                    <li><a href="/kontakt">KONTAKT</a></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+        </nav>
+        
+    </section>
+    
+    <section class="banket">
+    <h1>Banketka</h1>
+    <h3>Naše banketka je ideálním místem pro oslavy, firemní akce či speciální události.</h3>
+        <ul>
+    <li class="circle">Banketka je schopna pohodlně pojmout až 30 hostů</li>
+    <li class="circle"> Flexibilní uspořádaní stolů</li>
+    <li class="circle">Možnost objednání <i>rautů</i></li>
+        </ul>
+    
+    </section>
+    
+    
+    <section class="galleryban">
+
+    <img src="../lunaaa/b1.JPEG" class="gallery-img" onclick="openImage(0)">
+    <img src="../lunaaa/b2.JPEG" class="gallery-img" onclick="openImage(1)">
+    <img src="../lunaaa/b3.JPEG" class="gallery-img" onclick="openImage(2)">
+    <img src="../lunaaa/b4.JPEG" class="gallery-img" onclick="openImage(3)">
+
+</section>
+    
+     <section class="galleryban">
+
+    <img src="../lunaaa/b5.JPEG" class="gallery-img" onclick="openImage(4)">
+    <img src="../lunaaa/b6.JPEG" class="gallery-img" onclick="openImage(5)">
+    <img src="../lunaaa/b7.JPEG" class="gallery-img" onclick="openImage(6)">
+    <img src="../lunaaa/b8.JPEG" class="gallery-img" onclick="openImage(7)">
+
+</section>
+
+<div id="lightbox">
+    <span class="close" onclick="closeImage()">&times;</span>
+
+    <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+
+    <img id="bigImage">
+
+    <button class="next" onclick="changeImage(1)">&#10095;</button>
+</div>
+    
+    <section class="banket">
+    <h2><u>Rezervace</u></h2>
+    
+        <ul>
+    <li class="circle">Poplatek za použití banketky je 500 Kč</li>
+    <li class="circle">Povinný odběr všech alkoholických i nealkoholických nápojů</li>
+        </ul>
+        <h3>Banketku rezervujte na čísle <a href="tel:+420730675319">+420 730 675 319</a></h3>
+    
+    </section>  
+    
+
+    
+<section class="banket">
+    <h2><u>Rauty</u></h2>
+    <h3>Nabízíme možnost zajištění rautů na Vaši akci v banketce</h3>
+    <p>Pro objednání rautu nebo více informací zavolejte na číslo:</p>
+    <p><b>Vladimír Kajpuš: <a href="tel:+420608904040"> +420 608 904 040</a></b></p>
+    
+ <div class="galleryban">
+    <img src="../lunaaa/r1.JPEG" class="gallery-img" onclick="openImage(8)">
+    <img src="../lunaaa/r2.JPEG" class="gallery-img" onclick="openImage(9)">
+    <img src="../lunaaa/r3.JPEG" class="gallery-img" onclick="openImage(10)">
+    <img src="../lunaaa/r4.JPEG" class="gallery-img" onclick="openImage(11)">
+ </div>
+    </section>
+    
+    
+    
+    <section class="socky">
+        <h1>Kontakt</h1>
+        <p> Rezervace, objednávky: <a href="tel:+420730675319">+420 730 675 319</a> </p>
+        <p>Vedení:<a href="tel:+420777272704"> +420 777 272 704</a></p>
+        <div class="logo">
+        <a href="https://www.facebook.com/profile.php?id=61558400668974"><img src="../lunaaa/logoFB.png"></a> 
+        <a href="https://www.instagram.com/lunahavirov/"><img src="../lunaaa/logoIG.png"></a> 
+        </div>
+        
+        
+    </section>
+ <script>
+    const images = [
+    "../lunaaa/b1.JPEG",
+    "../lunaaa/b2.JPEG",
+    "../lunaaa/b3.JPEG",
+    "../lunaaa/b4.JPEG",
+    "../lunaaa/b5.JPEG",
+    "../lunaaa/b6.JPEG",
+    "../lunaaa/b7.JPEG",
+    "../lunaaa/b8.JPEG",
+    "../lunaaa/r1.JPEG",
+    "../lunaaa/r2.JPEG",
+    "../lunaaa/r3.JPEG", 
+    "../lunaaa/r4.JPEG", 
+];
+
+let currentImage = 0;
+
+function openImage(index){
+    currentImage = index;
+    document.getElementById("lightbox").style.display = "flex";
+    document.getElementById("bigImage").src = images[currentImage];
+}
+
+function closeImage(){
+    document.getElementById("lightbox").style.display = "none";
+}
+
+function changeImage(direction){
+
+    currentImage += direction;
+
+    if(currentImage < 0){
+        currentImage = images.length - 1;
+    }
+
+    if(currentImage >= images.length){
+        currentImage = 0;
+    }
+
+    document.getElementById("bigImage").src = images[currentImage];
+}
+    
+    
+    </script>   
+    
+    
+    
+    <script>
+        var navLinks = document.getElementById("navLinks")
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+    </script>
+   
+    </body>
+</html>
