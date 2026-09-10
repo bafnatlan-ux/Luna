@@ -163,8 +163,12 @@ nav .fa-solid{
     padding-top: 30px;
     padding-bottom: 30px;
 }
-.txt{
+.txt p{
+      font-size: 18px;
+    line-height: 1.6;
     text-align: center;
+    max-width: 900px;
+    margin: 0 auto 20px;
 }
 .slider {
     width: 100%;
