@@ -461,4 +461,41 @@ nav .fa-solid{
         margin: 10px auto;
         width: 80%;
     }
+
+/* Kontejner pro tlačítka */
+.social-links-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px; /* Mezera mezi tlačítky */
+  flex-wrap: wrap; /* Na mobilu se zalomí pod sebe, pokud se nevejdou */
+  margin-top: 15px;
+}
+
+/* Společný základ pro obě tlačítka */
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.social-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px); /* Jemný efekt nadzvednutí při najetí myší */
+}
+
+/* Facebook tlačítko */
+.fb-btn {
+  background-color: #1877f2;
+}
+
+/* Instagram tlačítko (ikonický přechod) */
+.ig-btn {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
 }
