@@ -340,7 +340,7 @@ nav .fa-solid{
     color:white;
     cursor:pointer;
 }
-.banket ul{
+.events-info ul{
     padding-left: 200px;
 }
 .banket {
@@ -359,10 +359,10 @@ nav .fa-solid{
     padding-bottom: 10px;
     padding-top: 15px;
 }
-.banket a{
+.events-info a{
     color: #050505;
 }
-.banket p{
+.events-info p{
     text-align: center;
     padding-bottom: 10px;
 }
