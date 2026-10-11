@@ -340,19 +340,15 @@ nav .fa-solid{
     color:white;
     cursor:pointer;
 }
+
 .events-info ul{
-    padding-left: 200px;
+    display: inline-block; /* Drží šířku podle textu, ale zůstane uprostřed */
+  text-align: left;      /* Zarovná text i odrážky doleva */
+  margin: 15px auto;
+  padding-left: 20px;
 }
-.banket {
-    border-style: outset;
-    color: #393238;
-    border-radius: 8px;
-    margin-left: 150px;
-    margin-right: 150px;
-    margin-top: 20px;
-    background-color: #edebe4;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
+.events-info il{
+    margin-bottom: 8px;
 }
 .banket h2{
     text-align: center;
