@@ -186,6 +186,13 @@ nav .fa-solid{
       padding: 20px;
       box-sizing: border-box;
     }
+.ctverec img {
+      max-width: 60px;   /* Nastavte požadovanou velikost ikony */
+      max-height: 60px;  /* Maximální výška ikony */
+      width: auto;
+      height: auto;
+      margin-bottom: 12px; /* Mezera mezi ikonou a textem */
+    }
 .slider {
     width: 100%;
     max-width: 1000px;
