@@ -163,13 +163,28 @@ nav .fa-solid{
     padding-top: 30px;
     padding-bottom: 30px;
 }
-.txt p{
-      font-size: 18px;
-    line-height: 1.6;
-    text-align: center;
-    max-width: 900px;
-    margin: 0 auto 20px;
-}
+.trictverce {
+      display: flex;
+      justify-content: center;
+      gap: 20px; /* Mezera mezi čtverci */
+      padding: 20px;
+      flex-wrap: wrap; /* Zabezpečí správné zobrazení na malých obrazovkách */
+    }
+.ctverec {
+      width: 250px;             /* Šířka boxu */
+      height: 250px;            /* Výška boxu (stejná jako šířka = čtverec) */
+      background-color: #f8f8f8; /* Světle šedé pozadí */
+      border: 1px solid #e2e2e2; /* Jemný šedý rámeček */
+      border-radius: 16px;       /* Zakulacené rohy */
+      
+      /* Vycentrování obsahu/textu uvnitř čtverce */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      
+      padding: 20px;
+      box-sizing: border-box;
 .slider {
     width: 100%;
     max-width: 1000px;
